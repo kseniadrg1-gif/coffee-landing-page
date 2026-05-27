@@ -1,0 +1,243 @@
+/* ========================================
+   АДАПТАЦИЯ ПОД ВСЕ УСТРОЙСТВА
+   ТОЛЬКО МЕДИА-ЗАПРОСЫ (без дублирования стилей)
+   ======================================== */
+
+/* Базовые настройки для мобильных */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 60px 5% !important;
+  }
+
+  /* Навигация */
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
+/* Планшеты (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .included-grid,
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: 180px !important;
+  }
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 50px !important;
+  }
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 50px !important;
+  }
+}
+
+/* Большие телефоны (480px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .included-grid,
+  .reviews-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: 160px !important;
+  }
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .itinerary-item {
+    grid-template-columns: 1fr !important;
+    padding-left: 20px !important;
+  }
+  .timeline-dot {
+    left: -4px !important;
+    width: 8px !important;
+    height: 8px !important;
+    top: 30px !important;
+  }
+  .timeline-line {
+    display: none !important;
+  }
+  .pricing-card {
+    padding: 30px 20px !important;
+  }
+  .hero-title {
+    font-size: clamp(40px, 10vw, 56px) !important;
+  }
+}
+
+/* Маленькие телефоны (< 480px) */
+@media (max-width: 480px) {
+  .included-grid,
+  .reviews-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 200px !important;
+  }
+  .gallery-item.tall {
+    grid-row: span 1 !important;
+    min-height: auto !important;
+  }
+  .gallery-item.wide {
+    grid-column: span 1 !important;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  .itinerary-item {
+    grid-template-columns: 1fr !important;
+    padding: 25px 0 25px 15px !important;
+  }
+  .timeline-dot {
+    left: -4px !important;
+    width: 6px !important;
+    height: 6px !important;
+    top: 30px !important;
+  }
+  .pricing-card {
+    padding: 25px 16px !important;
+  }
+  .btn-primary,
+  .btn-outline {
+    padding: 10px 20px !important;
+    font-size: 11px !important;
+  }
+  .section-title {
+    font-size: 24px !important;
+  }
+  .divider {
+    width: 40px !important;
+    margin: 15px 0 !important;
+  }
+  .floating-badge {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 11px !important;
+  }
+  .floating-ps {
+    top: 20px !important;
+    right: 14px !important;
+  }
+  .floating-ae {
+    top: 8px !important;
+    right: 4px !important;
+  }
+  .corner {
+    width: 8px !important;
+    height: 8px !important;
+  }
+  .corner-tl {
+    top: 4px !important;
+    left: 4px !important;
+    border-width: 1px 0 0 1px !important;
+  }
+  .corner-tr {
+    top: 4px !important;
+    right: 4px !important;
+    border-width: 1px 1px 0 0 !important;
+  }
+  .corner-bl {
+    bottom: 4px !important;
+    left: 4px !important;
+    border-width: 0 0 1px 1px !important;
+  }
+  .corner-br {
+    bottom: 4px !important;
+    right: 4px !important;
+    border-width: 0 1px 1px 0 !important;
+  }
+  .orb-1,
+  .orb-2,
+  .hero-circle-1,
+  .hero-circle-2 {
+    display: none !important;
+  }
+  footer {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .footer-links {
+    justify-content: center !important;
+  }
+  .stats-grid div {
+    padding: 20px 16px !important;
+  }
+}
+
+/* Десктопы (1024px+) */
+@media (min-width: 1024px) {
+  .included-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-auto-rows: 200px !important;
+  }
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 80px !important;
+  }
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 80px !important;
+  }
+}
+
+/* Скрываем элемент timeline на мобильных */
+@media (max-width: 767px) {
+  .timeline-line {
+    display: none;
+  }
+}
